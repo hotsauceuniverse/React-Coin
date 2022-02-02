@@ -30,32 +30,61 @@
 //   }
 // }
 
+// --------------------------------------------------------------
+// import React, {useState} from "react"
+// import axios from "axios"
 
-import React, {useState} from 'react';
-import axios from 'axios';
+// axios({
+//     method:'get',
+//     url: 'https://api.bithumb.com/public/ticker/ALL'
+//   }).then(function (response) {
+//     console.log(response)
+//   })
+  
 
-axios({
-  method:'get',
-  url: 'https://api.bithumb.com/public/ticker/ALL'
-}).then(function (response) {
-  console.log(response)
-})
+// const App = () => {
+//   const [data, setData] = useState(null)
+//   const onClick = async() => {
+//     try{
+//       const response = await axios.get("https://api.bithumb.com/public/ticker/ALL")
+//       setData(response.data)
+//     } catch(e) {
+//       console.log(e)
+//     }
+//   }
 
-const App = ()=>{
-  const [data, setData] = useState(null);
-  const onClick = ()=>{
-    axios.get('https://api.bithumb.com/public/ticker/ALL').then(reponse => {
-      setData(reponse.data);
-    });
-  }
-  return (
-    <div>
-      <div>
-        <button onClick={onClick}>불러오기</button>
-      </div>
-      {data && <textarea rows={7} value={JSON.stringify(data, null, 2)} readOnly={true} />}
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <div>
+//         <button onClick={onClick}>불러오기</button>
+//       </div>
+//       {data && <textarea rows={7} value={JSON.stringify(data, null, 2)} readOnly={true} />}
+//     </div>
+//   )
+// }
 
-export default App;
+// export default App
+// --------------------------------------------------------------
+// import { useState, useEffect } from "react"
+
+// function Body() {
+//   const [loading, setLoading] = useState(true)
+//   const [coins, setCoins] = useState([])
+//   useEffect(() => {
+//     fetch("https://api.bithumb.com/public/ticker/ALL")
+//     .then (response => response.json())
+//     .then((json) => setCoins(json))
+//     setLoading(false)
+//   },[])
+//   return (
+//     <div>
+//       {loading ? <p>Loading...</p> : null}
+//     </div>
+//   )
+// }
+
+// export default Body
+
+
+
+
