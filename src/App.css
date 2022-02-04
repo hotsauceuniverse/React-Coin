@@ -18,3 +18,11 @@ body {
 .input_box {
   margin-left: 10px;
 }
+
+.loading_comment {
+  color: white;
+} 
+
+.coin_list {
+  color: white;
+}
